@@ -1,3 +1,23 @@
+// ═══ TRACKING — WhatsApp Conversions ═══
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      // Google Ads — conversão "Clicou botão Wpp"
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-16776809429/XJh-CJbNiuwZENWX578-',
+          'value': 0.0,
+          'currency': 'BRL'
+        });
+      }
+      // Meta Pixel — evento Lead
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    });
+  });
+});
+
 // ═══ NAVBAR SCROLL ═══
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
