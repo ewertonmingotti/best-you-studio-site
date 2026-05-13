@@ -122,15 +122,15 @@ const trainerData = {
   hanna:    { name:'Hanna',     role:'Best Fisio',     turno:'🌅 Matutino',  img:'trainer-hanna.png',     forca:6, humor:8, energia:8,  tecnica:10, motivacao:9 },
   mayara:   { name:'Mayara',    role:'Massoterapeuta', turno:'⏰ Flexível',  img:'trainer-mayara-masso.png', forca:5, humor:9, energia:7, tecnica:10, motivacao:9 },
   // Malota
-  rafael:   { name:'Rafael',    role:'Master Trainer', turno:'🌅 Matutino',  img:'trainer-rafael-master.png', forca:10, humor:7, energia:9,  tecnica:9, motivacao:10 },
-  ewerton:  { name:'Ewerton',   role:'Master Trainer', turno:'⏰ Flexível',  img:'trainer-ewerton.png',       forca:9, humor:8, energia:10, tecnica:9, motivacao:10 },
-  rafa:     { name:'Rafa',      role:'Master Trainer', turno:'🌙 Noturno',   img:'trainer-rafa.png',          forca:9, humor:9, energia:8,  tecnica:9, motivacao:9 },
-  giovanna: { name:'Giovanna',  role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-giovanna.png',      forca:7, humor:9, energia:9, tecnica:8, motivacao:9 },
-  levy:     { name:'Levy',      role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-levy.png',          forca:8, humor:10, energia:10, tecnica:8, motivacao:9 },
-  maiara:   { name:'Maiara',    role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-maiara.png',        forca:7, humor:8, energia:9,  tecnica:8, motivacao:10 },
-  raphael:  { name:'Raphael',   role:'Best Trainer',   turno:'🌙 Noturno',   img:'trainer-raphael.png',       forca:8, humor:9, energia:9,  tecnica:8, motivacao:9 },
-  pedro:    { name:'Pedro',     role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-pedro.png',     forca:8, humor:10, energia:9, tecnica:8, motivacao:9 },
-  lucasf:   { name:'Lucas',     role:'Best Fisio',     turno:'⏰ Flexível',  img:'trainer-lucas-fisio.png',   forca:6, humor:8, energia:8,  tecnica:10, motivacao:9 },
+  rafael:   { name:'Rafael',    role:'Master Trainer', turno:'🌅 Matutino',  img:'trainer-levy.png',          forca:10, humor:7, energia:9,  tecnica:9, motivacao:10 },
+  ewerton:  { name:'Ewerton',   role:'Master Trainer', turno:'⏰ Flexível',  img:'trainer-maiara.png',        forca:9, humor:8, energia:10, tecnica:9, motivacao:10 },
+  rafa:     { name:'Rafa',      role:'Master Trainer', turno:'🌙 Noturno',   img:'trainer-raphael.png',       forca:9, humor:9, energia:8,  tecnica:9, motivacao:9 },
+  giovanna: { name:'Giovanna',  role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-rafael-master.png', forca:7, humor:9, energia:9, tecnica:8, motivacao:9 },
+  levy:     { name:'Levy',      role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-levy-real.png',     forca:8, humor:10, energia:10, tecnica:8, motivacao:9 },
+  maiara:   { name:'Maiara',    role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-rafa.png',          forca:7, humor:8, energia:9,  tecnica:8, motivacao:10 },
+  raphael:  { name:'Raphael',   role:'Best Trainer',   turno:'🌙 Noturno',   img:'trainer-giovanna.png',      forca:8, humor:9, energia:9,  tecnica:8, motivacao:9 },
+  pedro:    { name:'Pedro',     role:'Best Trainer',   turno:'🌅 Matutino',  img:'trainer-pedro.png',         forca:8, humor:10, energia:9, tecnica:8, motivacao:9 },
+  lucasf:   { name:'Lucas',     role:'Best Fisio',     turno:'⏰ Flexível',  img:'trainer-ewerton.png',       forca:6, humor:8, energia:8,  tecnica:10, motivacao:9 },
 };
 
 const statConfig = [
