@@ -1,0 +1,9 @@
+# Vídeos grandes (não sobem pro GitHub - ficam só locais)
+*.mp4
+*.mov
+*.avi
+*.webm
+
+# Sistema
+.DS_Store
+Thumbs.db
