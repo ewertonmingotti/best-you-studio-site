@@ -475,7 +475,8 @@ section { padding:6rem 2rem; }
 
 /* ═══ FOOTER ═══ */
 .footer {
-  background:var(--bg-alt); padding:4rem 2rem 2rem;
+  background: linear-gradient(180deg, var(--bg-alt) 0%, #e2dcd2 100%);
+  padding:4rem 2rem 2rem;
   border-top:1px solid rgba(201,168,76,0.1);
 }
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1200px; margin:0 auto; }
