@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be Wellness Day — Mídia Kit 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════════
+       A4 PDF LAYOUT
+    ═══════════════════════════════════════════════ */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    :root {
+      --bg: #0B0B0B;
+      --bg-alt: #141414;
+      --card: #1a1a1a;
+      --card-border: rgba(201,168,76,0.15);
+      --gold: #c9a84c;
+      --gold-light: #e4cc7a;
+      --gold-dark: #dfc06a;
+      --gold-gradient: linear-gradient(135deg, #c9a84c 0%, #e4cc7a 50%, #a8893d 100%);
+      --text: #f5f2ea;
+      --text-muted: #9e9a90;
+      --text-dim: #6b6760;
+      --border: rgba(201,168,76,0.12);
+      --border-light: rgba(201,168,76,0.25);
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --placeholder: #c9a84c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-sans);
+      background: #333;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE SYSTEM
+    ═══════════════════════════════════════════════ */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--bg);
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    }
+
+    .page-inner {
+      padding: 48px 56px;
+      height: 100%;
+      min-height: 297mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-watermark {
+      position: absolute;
+      bottom: 24px;
+      left: 56px;
+      right: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      opacity: 0.5;
+    }
+
+    /* ═══════════════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════════════ */
+    .label {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .label::before {
+      content: '◆';
+      margin-right: 6px;
+      font-size: 7px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .section-title .gold { color: var(--gold-dark); }
+
+    .section-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 500px;
+    }
+
+    .divider {
+      width: 50px;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 16px 0;
+    }
+
+    .divider-full {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PLACEHOLDER FIELDS (para editar no Canva)
+    ═══════════════════════════════════════════════ */
+    .field {
+      border: 1.5px dashed var(--gold);
+      border-radius: 8px;
+      padding: 10px 16px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+      color: var(--gold);
+      font-style: italic;
+      background: rgba(201,168,76,0.04);
+      margin: 4px 0;
+    }
+
+    .field-lg {
+      min-height: 56px;
+      font-size: 13px;
+    }
+
+    .field-xl {
+      min-height: 80px;
+      align-items: flex-start;
+      padding-top: 14px;
+    }
+
+    .field-label {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-style: normal;
+    }
+
+    .field-group {
+      margin-bottom: 12px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 1: COVER
+    ═══════════════════════════════════════════════ */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0;
+      background: 
+        radial-gradient(ellipse at 50% 30%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        var(--bg);
+    }
+
+    .cover .page-inner {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cover-logo {
+      height: 52px;
+      margin-bottom: 40px;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+
+    .cover-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 24px;
+      border: 1px solid var(--border-light);
+      border-radius: 100px;
+      font-size: 8px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .cover-event {
+      font-family: var(--font-serif);
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 1.05;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+
+    .cover-event .gold { color: var(--gold-dark); }
+
+    .cover-tagline {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+
+    .cover-meta {
+      display: flex;
+      gap: 40px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .cover-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cover-meta-value {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .cover-line {
+      width: 120px;
+      height: 1px;
+      background: var(--gold-gradient);
+      margin: 40px 0 32px;
+    }
+
+    .cover-subtitle {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 2: CONCEITO
+    ═══════════════════════════════════════════════ */
+    .conceito-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .conceito-pillar {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .conceito-pillar-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .conceito-pillar h4 {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .conceito-pillar p {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .quote-block {
+      background: var(--card);
+      border-left: 3px solid var(--gold);
+      padding: 24px 28px;
+      margin-top: 32px;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .quote-block p {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold-dark);
+      line-height: 1.6;
+    }
+
+    .quote-block .author {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-style: normal;
+      color: var(--text-dim);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 3: PÚBLICO & CRONOGRAMA
+    ═══════════════════════════════════════════════ */
+    .publico-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .pub-stat {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .pub-stat-number {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pub-stat-label {
+      font-size: 8px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .timeline {
+      margin-top: 20px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .timeline-item:last-child { border-bottom: none; }
+
+    .timeline-time {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      padding-top: 2px;
+    }
+
+    .timeline-content h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .timeline-content p {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .timeline-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 7px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    .badge-sim { background: rgba(201,168,76,0.15); color: var(--gold); }
+    .badge-analise { background: rgba(255,255,255,0.08); color: var(--text-dim); }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 4: ATIVIDADES
+    ═══════════════════════════════════════════════ */
+    .atividades-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .ativ-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ativ-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold-gradient);
+    }
+
+    .ativ-card h4 {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .ativ-card p {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .ativ-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 7px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 5-6: PATROCÍNIOS
+    ═══════════════════════════════════════════════ */
+    .sponsor-tier {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sponsor-tier::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+
+    .tier-prime::before { background: linear-gradient(90deg, #c9a84c, #e4cc7a, #c9a84c); }
+    .tier-premium::before { background: linear-gradient(90deg, #a3a3a3, #d4d4d4, #a3a3a3); }
+    .tier-gold::before { background: linear-gradient(90deg, #cd7f32, #e8a95e, #cd7f32); }
+
+    .sponsor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .sponsor-name {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .tier-prime .sponsor-name { color: var(--gold-dark); }
+    .tier-premium .sponsor-name { color: #d4d4d4; }
+    .tier-gold .sponsor-name { color: #e8a95e; }
+
+    .sponsor-price {
+      text-align: right;
+    }
+
+    .sponsor-price .field {
+      min-width: 160px;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      min-height: 42px;
+    }
+
+    .sponsor-price-label {
+      font-size: 7px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .sponsor-section h5 {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .sponsor-list {
+      list-style: none;
+    }
+
+    .sponsor-list li {
+      font-size: 10px;
+      color: var(--text-muted);
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .sponsor-list li:last-child { border-bottom: none; }
+
+    .sponsor-list li::before {
+      content: '◆';
+      color: var(--gold);
+      font-size: 6px;
+      flex-shrink: 0;
+    }
+
+    .tier-premium .sponsor-list li::before { color: #a3a3a3; }
+    .tier-gold .sponsor-list li::before { color: #cd7f32; }
+
+    /* ═══════════════════════════════════════════════
+       PAGE 7: CONTATO
+    ═══════════════════════════════════════════════ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .contact-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .contact-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .contact-card .role {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .contact-card a {
+      color: var(--gold-dark);
+      text-decoration: none;
+    }
+
+    .final-message {
+      text-align: center;
+      margin-top: 40px;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+    }
+
+    .final-message h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .final-message p {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PRINT
+    ═══════════════════════════════════════════════ */
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+      .no-print { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════════
+       PRINT BUTTON (screen only)
+    ═══════════════════════════════════════════════ */
+    .print-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      z-index: 1000;
+      font-family: var(--font-sans);
+      letter-spacing: 1px;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+      transition: transform 0.2s;
+    }
+
+    .print-btn:hover { transform: scale(1.05); }
+
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">⬇ Salvar como PDF</button>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 1 · CAPA
+═══════════════════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="page-inner">
+    <img src="logo-bestyou-transparent.png" alt="Best You Studio" class="cover-logo">
+    <div class="cover-badge">◆ 1ª Edição ◆</div>
+    <h1 class="cover-event">
+      Be <span class="gold">Wellness</span> Day
+    </h1>
+    <p class="cover-tagline">Um dia inteiro dedicado à sua melhor versão.</p>
+    <div class="cover-line"></div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-value">26.09.2026</span>
+        <span>Data</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-value">7h30 – 14h</span>
+        <span>Horário</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-value">150</span>
+        <span>Convidados</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-value">Jundiaí, SP</span>
+        <span>Local</span>
+      </div>
+    </div>
+    <div style="margin-top: 64px;">
+      <span class="cover-subtitle">Proposta Comercial de Patrocínio</span>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Confidencial · Best You Studio</span>
+    <span>01 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 2 · CONCEITO DO EVENTO
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <span class="label">Sobre o Evento</span>
+    <h2 class="section-title">Muito mais que um evento.<br>Um <span class="gold">ecossistema wellness</span> em um dia.</h2>
+    <div class="divider"></div>
+    <p class="section-desc">
+      O <strong>Be Wellness Day</strong> é uma manhã e início de tarde dedicados à prática de atividade física, bem-estar e saúde. Um dia alegre, com DJ ao vivo, atividades diversas e ambientes de convivência — criando uma experiência leve, gostosa e saudável.
+    </p>
+
+    <div class="conceito-grid">
+      <div class="conceito-pillar">
+        <div class="conceito-pillar-icon">🏃‍♀️</div>
+        <h4>Movimento</h4>
+        <p>Aulas de treino funcional, corrida, yoga, cycling e sessões personalizadas com os melhores treinadores.</p>
+      </div>
+      <div class="conceito-pillar">
+        <div class="conceito-pillar-icon">🎵</div>
+        <h4>Experiência</h4>
+        <p>DJ ao vivo criando a atmosfera perfeita. Ambientes de convivência para networking e conexão entre os participantes.</p>
+      </div>
+      <div class="conceito-pillar">
+        <div class="conceito-pillar-icon">🌿</div>
+        <h4>Bem-Estar</h4>
+        <p>Yoga, mobilidade e práticas de autocuidado. Um momento para desacelerar, respirar e se reconectar consigo mesmo.</p>
+      </div>
+      <div class="conceito-pillar">
+        <div class="conceito-pillar-icon">🤝</div>
+        <h4>Comunidade</h4>
+        <p>150 convidados de alto padrão reunidos em um só lugar. A oportunidade perfeita para ativações de marca com impacto real.</p>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>"Uma experiência imersiva de wellness que conecta marcas premium a um público qualificado que investe ativamente na sua saúde e qualidade de vida."</p>
+      <div class="author">— Best You Studio</div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>02 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 3 · PÚBLICO & CRONOGRAMA
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <span class="label">O Público</span>
+    <h2 class="section-title">High Ticket. Engajado. <span class="gold">Qualificado.</span></h2>
+    <div class="divider"></div>
+    <p class="section-desc" style="margin-bottom: 20px;">
+      Público majoritariamente feminino, classes A e B+, com alto poder aquisitivo e forte interesse em saúde, bem-estar e lifestyle premium.
+    </p>
+
+    <div class="publico-stats">
+      <div class="pub-stat">
+        <div class="pub-stat-number">150</div>
+        <div class="pub-stat-label">Convidados</div>
+      </div>
+      <div class="pub-stat">
+        <div class="pub-stat-number">70%</div>
+        <div class="pub-stat-label">Mulheres</div>
+      </div>
+      <div class="pub-stat">
+        <div class="pub-stat-number">A/B+</div>
+        <div class="pub-stat-label">Classe Social</div>
+      </div>
+      <div class="pub-stat">
+        <div class="pub-stat-number">28-55</div>
+        <div class="pub-stat-label">Faixa Etária</div>
+      </div>
+    </div>
+
+    <div class="divider-full"></div>
+
+    <span class="label">Cronograma do Dia</span>
+    <h2 class="section-title" style="font-size: 22px;">Da manhã à tarde. <span class="gold">Cada hora conta.</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">7h30</div>
+        <div class="timeline-content">
+          <h4>Abertura & Recepção</h4>
+          <p>Welcome dos convidados, entrega de kits e credenciamento. Ativações de parceiros nos espaços de convivência.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">8h00</div>
+        <div class="timeline-content">
+          <h4>Be Run + Be Yoga <span class="timeline-badge badge-sim">simultâneos</span></h4>
+          <p>Duas atividades de abertura acontecendo ao mesmo tempo — corrida ao ar livre e yoga para quem prefere uma chegada mais suave.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9h00</div>
+        <div class="timeline-content">
+          <h4>DJ ao Vivo + Ativações de Parceiros</h4>
+          <p>O DJ inicia o set e as ativações dos parceiros começam nos espaços dedicados. Degustações, experiências e networking.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9h–13h</div>
+        <div class="timeline-content">
+          <h4>Programação Rotativa de Atividades</h4>
+          <p>Aulas e sessões em horários escalonados: Best Session · Group Session · Be Yoga · Be Mobility · Be Cycling (em análise)</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">13h–14h</div>
+        <div class="timeline-content">
+          <h4>Encerramento & Networking</h4>
+          <p>Momento de confraternização, fotos e últimas ativações dos parceiros.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>03 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 4 · ATIVIDADES
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <span class="label">As Experiências</span>
+    <h2 class="section-title">Atividades pensadas para <span class="gold">todos os perfis.</span></h2>
+    <div class="divider"></div>
+    <p class="section-desc" style="margin-bottom: 16px;">
+      Uma curadoria de atividades que cobre desde alta intensidade até relaxamento — para que cada convidado encontre a sua conexão com o movimento.
+    </p>
+
+    <div class="atividades-grid">
+      <div class="ativ-card">
+        <div class="ativ-tag">Treino</div>
+        <h4>Best Session</h4>
+        <p>Sessões de treino personalizado com os Best Trainers. Atendimento exclusivo e método científico comprimido em 30 minutos.</p>
+      </div>
+      <div class="ativ-card">
+        <div class="ativ-tag">Grupo</div>
+        <h4>Group Session</h4>
+        <p>Aulas em grupo de treino funcional. Energia coletiva, motivação e resultado — com música e a vibe do evento.</p>
+      </div>
+      <div class="ativ-card">
+        <div class="ativ-tag">Corrida</div>
+        <h4>Be Run</h4>
+        <p>Corrida comunitária para todos os níveis. Da caminhada à performance. A comunidade de corrida da Best You em ação.</p>
+      </div>
+      <div class="ativ-card">
+        <div class="ativ-tag">Yoga</div>
+        <h4>Be Yoga</h4>
+        <p>Prática de yoga ao ar livre. Fluidez, respiração e presença — para equilibrar corpo e mente no ritmo certo.</p>
+      </div>
+      <div class="ativ-card">
+        <div class="ativ-tag">Mobilidade</div>
+        <h4>Be Mobility</h4>
+        <p>Sessão focada em mobilidade articular e flexibilidade. Prevenção, recuperação e qualidade de movimento.</p>
+      </div>
+      <div class="ativ-card" style="border-style: dashed; border-color: var(--text-dim);">
+        <div class="ativ-tag" style="background: rgba(255,255,255,0.06); color: var(--text-dim);">Em análise</div>
+        <h4 style="color: var(--text-dim);">Be Cycling</h4>
+        <p style="color: var(--text-dim);">Indoor cycling com trilha sonora do DJ. Alta energia e performance cardiovascular em um formato imersivo.</p>
+      </div>
+    </div>
+
+    <div class="divider-full"></div>
+
+    <span class="label">Ambientes</span>
+    <h2 class="section-title" style="font-size: 20px;">Espaços que <span class="gold">conectam.</span></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px;">
+      <div style="background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 16px; text-align: center;">
+        <div style="font-size: 20px; margin-bottom: 8px;">🎧</div>
+        <div style="font-size: 11px; font-weight: 600; margin-bottom: 4px;">Palco DJ</div>
+        <div style="font-size: 9px; color: var(--text-muted);">Som ao vivo durante todo o evento</div>
+      </div>
+      <div style="background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 16px; text-align: center;">
+        <div style="font-size: 20px; margin-bottom: 8px;">☕</div>
+        <div style="font-size: 11px; font-weight: 600; margin-bottom: 4px;">Lounge & Convivência</div>
+        <div style="font-size: 9px; color: var(--text-muted);">Networking e espaço de descanso</div>
+      </div>
+      <div style="background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 16px; text-align: center;">
+        <div style="font-size: 20px; margin-bottom: 8px;">📍</div>
+        <div style="font-size: 11px; font-weight: 600; margin-bottom: 4px;">Espaço Parceiros</div>
+        <div style="font-size: 9px; color: var(--text-muted);">Estandes e ativações de marca</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>04 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 5 · PATROCÍNIO PRIME
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <span class="label">Planos de Patrocínio</span>
+    <h2 class="section-title">Três categorias. <span class="gold">Resultados reais.</span></h2>
+    <div class="divider"></div>
+    <p class="section-desc" style="margin-bottom: 28px;">
+      Cada cota oferece visibilidade, experiência e conexão direta com nosso público premium. Escolha a que melhor se encaixa na sua marca.
+    </p>
+
+    <!-- PRIME -->
+    <div class="sponsor-tier tier-prime">
+      <div class="sponsor-header">
+        <div>
+          <div style="font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px;">★ Cota Máxima</div>
+          <div class="sponsor-name">Prime</div>
+        </div>
+        <div class="sponsor-price">
+          <div class="field" style="border-color: var(--gold);">[Inserir Valor]</div>
+          <div class="sponsor-price-label">Investimento</div>
+        </div>
+      </div>
+
+      <div class="sponsor-grid">
+        <div class="sponsor-section">
+          <h5>◆ Entregas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Entrega 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Entrega 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Entrega 3]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Entrega 4]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Entrega 5]</div>
+            </li>
+          </ul>
+        </div>
+        <div class="sponsor-section">
+          <h5>◆ Contrapartidas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Contrapartida 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Contrapartida 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Contrapartida 3]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Contrapartida 4]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px;">[Contrapartida 5]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>05 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 6 · PATROCÍNIO PREMIUM + GOLD
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <!-- PREMIUM -->
+    <div class="sponsor-tier tier-premium">
+      <div class="sponsor-header">
+        <div>
+          <div style="font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: #a3a3a3; margin-bottom: 4px;">Cota Intermediária</div>
+          <div class="sponsor-name">Premium</div>
+        </div>
+        <div class="sponsor-price">
+          <div class="field" style="border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Inserir Valor]</div>
+          <div class="sponsor-price-label">Investimento</div>
+        </div>
+      </div>
+
+      <div class="sponsor-grid">
+        <div class="sponsor-section">
+          <h5>◆ Entregas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Entrega 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Entrega 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Entrega 3]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Entrega 4]</div>
+            </li>
+          </ul>
+        </div>
+        <div class="sponsor-section">
+          <h5>◆ Contrapartidas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Contrapartida 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Contrapartida 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Contrapartida 3]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #a3a3a3; color: #a3a3a3; background: rgba(163,163,163,0.04);">[Contrapartida 4]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOLD -->
+    <div class="sponsor-tier tier-gold">
+      <div class="sponsor-header">
+        <div>
+          <div style="font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: #cd7f32; margin-bottom: 4px;">Cota de Entrada</div>
+          <div class="sponsor-name">Gold</div>
+        </div>
+        <div class="sponsor-price">
+          <div class="field" style="border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Inserir Valor]</div>
+          <div class="sponsor-price-label">Investimento</div>
+        </div>
+      </div>
+
+      <div class="sponsor-grid">
+        <div class="sponsor-section">
+          <h5>◆ Entregas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Entrega 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Entrega 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Entrega 3]</div>
+            </li>
+          </ul>
+        </div>
+        <div class="sponsor-section">
+          <h5>◆ Contrapartidas</h5>
+          <ul class="sponsor-list">
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Contrapartida 1]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Contrapartida 2]</div>
+            </li>
+            <li>
+              <div class="field" style="flex: 1; min-height: 24px; font-size: 9px; padding: 4px 10px; border-color: #cd7f32; color: #cd7f32; background: rgba(205,127,50,0.04);">[Contrapartida 3]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>06 / 07</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PÁGINA 7 · CONTATO
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-inner">
+    <div style="text-align: center;">
+      <span class="label">Vamos Juntos</span>
+      <h2 class="section-title" style="text-align: center;">Faça parte do<br>Be <span class="gold">Wellness</span> Day.</h2>
+      <div class="divider" style="margin-inline: auto;"></div>
+      <p class="section-desc" style="margin-inline: auto; text-align: center;">
+        Um dia que vai marcar a história do wellness em Jundiaí. Associe sua marca a uma experiência única, com um público de altíssima qualidade.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="livia-dealmaker.jpg" alt="Lívia" class="contact-avatar">
+        <h4>Lívia</h4>
+        <div class="role">Deal Maker · Best You Studio</div>
+        <p>📱 <a href="https://wa.me/5511915343715">(11) 91534-3715</a></p>
+        <p style="margin-top: 6px;">📧 <a href="mailto:livia@bestyoustudio.com.br">livia@bestyoustudio.com.br</a></p>
+      </div>
+      <div class="contact-card">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--card); border: 2px solid var(--border-light); margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;">
+          <img src="logo-bestyou-transparent.png" alt="Best You" style="height: 28px; filter: brightness(0) invert(1); opacity: 0.7;">
+        </div>
+        <h4>Best You Studio</h4>
+        <div class="role">Wellness Studio</div>
+        <p>📱 <a href="https://wa.me/5511992023517">(11) 99202-3517</a></p>
+        <p style="margin-top: 6px;">🌐 <a href="https://bestyoustudio.com.br">bestyoustudio.com.br</a></p>
+        <p style="margin-top: 6px;">📷 <a href="https://instagram.com/bestyoustudio">@bestyoustudio</a></p>
+      </div>
+    </div>
+
+    <div class="final-message">
+      <h3>Sua marca. Nosso público. <span style="color: var(--gold-dark);">Um dia inesquecível.</span></h3>
+      <p style="margin-top: 8px;">
+        Estamos ansiosos para construir esta experiência com parceiros que compartilham da nossa visão de wellness. 
+        <br>Entre em contato e garanta sua cota.
+      </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <img src="logo-bestyou-transparent.png" alt="Best You" style="height: 36px; filter: brightness(0) invert(1); opacity: 0.4;">
+      <div style="font-size: 8px; color: var(--text-dim); margin-top: 8px; letter-spacing: 2px; text-transform: uppercase;">
+        © 2026 Best You Studio · Todos os direitos reservados · Jundiaí, SP
+      </div>
+    </div>
+  </div>
+  <div class="page-watermark">
+    <span>Be Wellness Day · 26/09/2026</span>
+    <span>07 / 07</span>
+  </div>
+</div>
+
+</body>
+</html>
